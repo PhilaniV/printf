@@ -3,7 +3,7 @@
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
- * Esther philani
+ * 
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -14,23 +14,23 @@ int _putchar(char c)
 
 /**
  * buffer - Save the character in a buffer
- * @c: Character c
+ * @c: Character
  *
  * Return: 1
  **/
 int buffer(char c)
 {
-	static char estherpbuffer[1024];
-	static int z;
+	static char buffering[1024];
+	static int i;
 
-	if (c == -1 || z == 1024)
+	if (c == -1 || i == 1024)
 	{
-		write(1, estherpbuffer, z);
-		z = 0;
+		write(1, buffering, i);
+		i = 0;
 	}
 
 	if (c != -1)
-		estherpbuffer[z++] = c;
+		buffering[i++] = c;
 
 	return (1);
 }
